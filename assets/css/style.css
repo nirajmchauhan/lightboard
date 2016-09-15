@@ -1,0 +1,23 @@
+.container{
+    margin-top:20px;
+}
+.column {
+    display: block;
+    margin: 0 auto;
+    width: 550px;
+}
+.grid {
+    border: 2px solid #333;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.grid.yellow{
+	background-color: yellow;
+}
+
+.grid.red{
+	background-color: red;
+}

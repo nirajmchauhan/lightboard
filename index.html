@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lightboard</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+	
+	<div class="container">
+		<div class="row game-form">
+			<div class="col-lg-6 col-lg-offset-3">
+				<div class="page-header">
+					<h1 class="text-center">Lightboard!</h1>
+					<hr>
+					<p class="hidden text-center room-code-info">
+						You can invite your opponent using this number: <span></span>
+					</p>
+					<div class="row">
+						<div class="col-lg-4">
+							<div class="createRoomDiv">
+								<button id="create_room" class="btn btn-primary">Create Room</button>
+							</div>
+						</div>
+						<div class="col-lg-1">Or</div>
+						<div class="col-lg-7">
+							<div class="joinRoomDiv input-group">
+								<input type="text" id="room_id" class="form-control" placeholder="Enter Room ID">
+								<span class="input-group-btn">
+									<button class="btn btn-default" id="join_room" type="button">Go!</button>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row game-grid hidden">
+			<div class="col-lg-2">
+				<button id="lock" class="btn btn-primary hidden"></button>
+			</div>
+			<div class="col-lg-8">
+				<div class="column">
+					<div class="grid" data-index="0"></div>
+					<div class="grid" data-index="1"></div>
+					<div class="grid" data-index="2"></div>
+					<div class="grid" data-index="3"></div>
+					<div class="grid" data-index="4"></div>
+					<div class="grid" data-index="5"></div>
+					<div class="grid" data-index="6"></div>
+					<div class="grid" data-index="7"></div>
+					<div class="grid" data-index="8"></div>
+					<div class="grid" data-index="9"></div>
+				</div>
+				<div class="column">
+					<div class="grid" data-index="10"></div>
+					<div class="grid" data-index="11"></div>
+					<div class="grid" data-index="12"></div>
+					<div class="grid" data-index="13"></div>
+					<div class="grid" data-index="14"></div>
+					<div class="grid" data-index="15"></div>
+					<div class="grid" data-index="16"></div>
+					<div class="grid" data-index="17"></div>
+					<div class="grid" data-index="18"></div>
+					<div class="grid" data-index="19"></div>
+				</div>
+				<div class="column">
+					<div class="grid" data-index="20"></div>
+					<div class="grid" data-index="21"></div>
+					<div class="grid" data-index="22"></div>
+					<div class="grid" data-index="23"></div>
+					<div class="grid" data-index="24"></div>
+					<div class="grid" data-index="25"></div>
+					<div class="grid" data-index="26"></div>
+					<div class="grid" data-index="27"></div>
+					<div class="grid" data-index="28"></div>
+					<div class="grid" data-index="29"></div>
+				</div>
+				<div class="column">
+					<div class="grid" data-index="30"></div>
+					<div class="grid" data-index="31"></div>
+					<div class="grid" data-index="32"></div>
+					<div class="grid" data-index="33"></div>
+					<div class="grid" data-index="34"></div>
+					<div class="grid" data-index="35"></div>
+					<div class="grid" data-index="36"></div>
+					<div class="grid" data-index="37"></div>
+					<div class="grid" data-index="38"></div>
+					<div class="grid" data-index="39"></div>
+				</div>
+				<div class="column">
+					<div class="grid" data-index="40"></div>
+					<div class="grid" data-index="41"></div>
+					<div class="grid" data-index="42"></div>
+					<div class="grid" data-index="43"></div>
+					<div class="grid" data-index="44"></div>
+					<div class="grid" data-index="45"></div>
+					<div class="grid" data-index="46"></div>
+					<div class="grid" data-index="47"></div>
+					<div class="grid" data-index="48"></div>
+					<div class="grid" data-index="49"></div>
+				</div>
+				<div class="column">
+					<div class="grid" data-index="50"></div>
+					<div class="grid" data-index="51"></div>
+					<div class="grid" data-index="52"></div>
+					<div class="grid" data-index="53"></div>
+					<div class="grid" data-index="54"></div>
+					<div class="grid" data-index="55"></div>
+					<div class="grid" data-index="56"></div>
+					<div class="grid" data-index="57"></div>
+					<div class="grid" data-index="58"></div>
+					<div class="grid" data-index="59"></div>
+				</div>
+				<div class="column">
+					<div class="grid" data-index="60"></div>
+					<div class="grid" data-index="61"></div>
+					<div class="grid" data-index="62"></div>
+					<div class="grid" data-index="63"></div>
+					<div class="grid" data-index="64"></div>
+					<div class="grid" data-index="65"></div>
+					<div class="grid" data-index="66"></div>
+					<div class="grid" data-index="67"></div>
+					<div class="grid" data-index="68"></div>
+					<div class="grid" data-index="69"></div>
+				</div>
+				<div class="column">
+					<div class="grid" data-index="70"></div>
+					<div class="grid" data-index="71"></div>
+					<div class="grid" data-index="72"></div>
+					<div class="grid" data-index="73"></div>
+					<div class="grid" data-index="74"></div>
+					<div class="grid" data-index="75"></div>
+					<div class="grid" data-index="76"></div>
+					<div class="grid" data-index="77"></div>
+					<div class="grid" data-index="78"></div>
+					<div class="grid" data-index="79"></div>
+				</div>
+				<div class="column">
+					<div class="grid" data-index="80"></div>
+					<div class="grid" data-index="81"></div>
+					<div class="grid" data-index="82"></div>
+					<div class="grid" data-index="83"></div>
+					<div class="grid" data-index="84"></div>
+					<div class="grid" data-index="85"></div>
+					<div class="grid" data-index="86"></div>
+					<div class="grid" data-index="87"></div>
+					<div class="grid" data-index="88"></div>
+					<div class="grid" data-index="89"></div>
+				</div>
+				<div class="column">
+					<div class="grid" data-index="90"></div>
+					<div class="grid" data-index="91"></div>
+					<div class="grid" data-index="92"></div>
+					<div class="grid" data-index="93"></div>
+					<div class="grid" data-index="94"></div>
+					<div class="grid" data-index="95"></div>
+					<div class="grid" data-index="96"></div>
+					<div class="grid" data-index="97"></div>
+					<div class="grid" data-index="98"></div>
+					<div class="grid" data-index="99"></div>
+				</div>
+			</div>
+			<div class="col-lg-2">
+				<table class="table hidden score-card">
+					<tr>
+						<th>You</th>
+						<th>Opponent</th>
+					</tr>
+					<tr>
+						<td class="you">0</td>
+						<td class="opponent">0</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="/js/jquery.js"></script>
+	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/js/light-board.js"></script>
+
+</body>
+</html>

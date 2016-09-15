@@ -1,0 +1,16 @@
+{
+  "name": "lightboard",
+  "version": "1.0.0",
+  "description": "A simple game built in nodejs, sockets and jquery",
+  "repository": "https://github.com/nirajmchauhan/lightboard.git",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "author": "Niraj Chauhan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "socket.io": "^1.4.8"
+  }
+}
